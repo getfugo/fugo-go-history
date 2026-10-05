@@ -191,7 +191,7 @@ jobs:
       # node on PATH runs the fake-tool tests (small node scripts standing in for PostCSS,
       # Tailwind and Babel). tools/neohugo/node.sh, once it exists, installs the real tools
       # (pinned npm ci) for the real-tool tests, which skip without NEOHUGO_*_BIN.
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
 

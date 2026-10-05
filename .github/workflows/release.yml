@@ -53,7 +53,7 @@ jobs:
         with:
           python-version: "3.x"
       - name: Install asciidoctor
-        uses: reitzig/actions-asciidoctor@v2.0.2
+        uses: reitzig/actions-asciidoctor@v2.0.6
       - name: Install docutils
         run: |
           pip install docutils

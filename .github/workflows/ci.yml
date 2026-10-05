@@ -72,7 +72,7 @@ jobs:
         run: |
           go install mvdan.cc/gofumpt@latest
           go install github.com/magefile/mage@latest
-      - uses: actions/cache@v4
+      - uses: actions/cache@v6
         id: cache
         with:
           path: ~/go/pkg/mod

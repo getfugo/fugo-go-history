@@ -158,7 +158,7 @@ jobs:
       # against go.sum), as a local build does.
       - name: Restore esbuild
         id: esbuild-cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: tools/esbuild/bin/esbuild
           key: esbuild-${{ runner.os }}-${{ runner.arch }}-${{ steps.esbuild.outputs.esbuild }}-go${{ steps.esbuild.outputs.go }}-${{ hashFiles('tools/esbuild/build.sh') }}
@@ -172,7 +172,7 @@ jobs:
 
       - name: Save esbuild
         if: steps.esbuild-cache.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: tools/esbuild/bin/esbuild
           key: ${{ steps.esbuild-cache.outputs.cache-primary-key }}

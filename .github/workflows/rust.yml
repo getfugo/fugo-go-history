@@ -142,7 +142,7 @@ jobs:
           echo "go=$go" >>"$GITHUB_OUTPUT"
 
       - name: Set up Go ${{ steps.esbuild.outputs.go }}
-        uses: actions/setup-go@v6
+        uses: actions/setup-go@v7
         with:
           go-version: ${{ steps.esbuild.outputs.go }}
           # Its cache key would be the Go workflows' own; esbuild is cached below instead.
